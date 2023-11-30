@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Widget loader Demo</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" >
+
+    <link href="assets/libs/rainbow/themes/css/github.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/style.css" rel="stylesheet" >
+  </head>
+  <body>
+
+    <div class="container ">
+      <div class="row mt-5">
+        <div class="col-md-12">
+          <h2 class="extra-bold">Widget Demo</h2>
+          <p>This is the social bureau chat widget demo page.</p>
+        </div>
+
+        <div class="col-md-12 mt-3">
+          <h5>First step : Import loader.js</h5>
+          <p>Download and import the <code>loader.js</code> file into your page.</p>
+
+          <pre >
+            <code class="language-html" data-language="html">
+<script async src="assets/js/loader.js" data-license="license_code" data-name="sb-chat" ></script></code>
+          </pre>
+          <h6>Example</h6>
+          <pre >
+            <code class="language-html" data-language="html">
+<script async src="assets/js/loader.js" data-license="123" data-name="sb-chat" ></script></code>
+          </pre>
+        </div>
+
+        <div class="col-md-12 mt-3">
+          <h5>Last step : Add attribute data-address</h5>
+          <p>Add class <code>sb-chat-widget</code> and <code>data-address</code> to your html element to trigger chat. </p>
+
+          <pre >
+            <code class="language-html" data-language="html">
+<button class="sb-chat-widget" data-address="receiver_wallet_address">
+      Start Chat
+</button></code>
+          </pre>
+          <h6>Example</h6>
+          <pre >
+            <code class="language-html" data-language="html">
+<button class="sb-chat-widget" data-address="0x46259e80F1c90923Fd10dB355Eb3A377E867cB3F">
+      Start Chat
+</button></code>
+          </pre>
+
+        </div>
+        <div class="col-md-12 mt-3">
+          <h5>Sample Result</h5>
+          <p>You can click on this button to start using chat widget.</p>
+
+          <button
+              class="sb-chat-widget btn btn-primary mt-3"
+              data-address="0x46259e80F1c90923Fd10dB355Eb3A377E867cB3F"
+          >
+            Chat with John Wick
+          </button>
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <script
+        async
+        src="assets/js/loader.js"
+        data-license="123"
+        data-name="sb-chat"
+    ></script>
+    <script src="assets/libs/rainbow/rainbow-custom.min.js"></script>
+  </body>
+</html>

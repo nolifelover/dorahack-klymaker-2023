@@ -1,0 +1,19 @@
+node_modules/
+dist/
+coverage/
+
+.DS_Store
+
+.env
+logs/
+*.log
+
+package-lock.json
+yarn.lock
+
+
+.DS_Store
+
+# credential ignore
+firebase-adminsdk.json
+firebase-config.json

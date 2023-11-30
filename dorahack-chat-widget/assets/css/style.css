@@ -1,0 +1,35 @@
+@font-face {
+    font-family: "Noto Sans Thai Regular";
+    src: url("../fonts/NotoSansThai-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Noto Sans Thai SemiBold";
+    src: url("../fonts/NotoSansThai-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "Noto Sans Thai ExtraBold";
+    src: url("../fonts/NotoSansThai-ExtraBold.ttf");
+}
+
+
+body{
+    font-family: "Noto Sans Thai Regular";
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: "Noto Sans Thai SemiBold";
+}
+
+.extra-bold{
+    font-family: "Noto Sans Thai ExtraBold";
+}
+
+pre{
+   /* background: rgb(246,248,250);
+    border-radius: 4px;*/
+    border: 0px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}

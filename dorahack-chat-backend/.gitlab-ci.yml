@@ -1,0 +1,33 @@
+# Use the Node.js image with the specified version.
+image: nolifelover/firebase-tools:latest-node-18
+
+# Cache the node_modules directory to speed up the build process.
+cache:
+  paths:
+    - node_modules/
+
+# Define all stages
+stages:
+  - deploy
+
+deploy-dev:
+  stage: deploy
+  only:
+    - deploy-dev
+
+  script:
+    - yarn
+    - cp $ENV_FILE_DEV .env
+    - firebase deploy --only functions --token $FIREBASE_TOKEN
+
+deploy-prod:
+  stage: deploy
+  only:
+    - deploy-prod
+    - master
+    - main
+
+  script:
+    - yarn
+    - cp $ENV_FILE_PROD .env
+    - firebase deploy --only functions --token $FIREBASE_TOKEN

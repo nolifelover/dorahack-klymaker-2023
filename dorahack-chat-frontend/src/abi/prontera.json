@@ -1,0 +1,290 @@
+[
+  {
+    "inputs": [],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "peer",
+        "type": "address"
+      }
+    ],
+    "name": "ChatIsNotInitialized",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "peer",
+        "type": "address"
+      }
+    ],
+    "name": "PeerIsNotInitialized",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      }
+    ],
+    "name": "UserAlreadyInitialized",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      }
+    ],
+    "name": "UserIsNotInitialized",
+    "type": "error"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "initializer",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "peer",
+        "type": "address"
+      }
+    ],
+    "name": "ChatInitialized",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      }
+    ],
+    "name": "UserInitialized",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "chatInitializations",
+    "outputs": [
+      {
+        "internalType": "bytes",
+        "name": "",
+        "type": "bytes"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "firstUser",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "secondUser",
+        "type": "address"
+      }
+    ],
+    "name": "getChatInitialization",
+    "outputs": [
+      {
+        "internalType": "bytes",
+        "name": "",
+        "type": "bytes"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      }
+    ],
+    "name": "getUserInitialization",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "bytes",
+            "name": "encryptedUserSecret",
+            "type": "bytes"
+          },
+          {
+            "internalType": "bool",
+            "name": "publicKeyPrefix",
+            "type": "bool"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "publicKeyX",
+            "type": "bytes32"
+          }
+        ],
+        "internalType": "struct IProntera.UserInitialization",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes",
+        "name": "callerEncryptedChatSecret",
+        "type": "bytes"
+      },
+      {
+        "internalType": "bytes",
+        "name": "peerEncryptedChatSecret",
+        "type": "bytes"
+      },
+      {
+        "internalType": "address",
+        "name": "peer",
+        "type": "address"
+      }
+    ],
+    "name": "initializeChat",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes",
+        "name": "encryptedUserSecret",
+        "type": "bytes"
+      },
+      {
+        "internalType": "bool",
+        "name": "publicKeyPrefix",
+        "type": "bool"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "publicKeyX",
+        "type": "bytes32"
+      }
+    ],
+    "name": "initializeUser",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "initializer",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "peer",
+        "type": "address"
+      }
+    ],
+    "name": "isChatInitialized",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      }
+    ],
+    "name": "isUserInitialized",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "userInitializations",
+    "outputs": [
+      {
+        "internalType": "bytes",
+        "name": "encryptedUserSecret",
+        "type": "bytes"
+      },
+      {
+        "internalType": "bool",
+        "name": "publicKeyPrefix",
+        "type": "bool"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "publicKeyX",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]

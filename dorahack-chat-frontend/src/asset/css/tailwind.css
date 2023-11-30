@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-muted-light {
+  color: #9ca3af;
+}
+.w-\[32px\] {
+  width: 32px;
+}
+
+.h-\[32px\] {
+  height: 32px;
+}
+
+.w-\[128px\] {
+  width: 128px;
+}
+
+.h-\[128px\] {
+  height: 128px;
+}
+
+.react-icons {
+  vertical-align: middle;
+}
